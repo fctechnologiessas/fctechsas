@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de contacto de Factory Computers Technology S.A.S. Envíanos los detalles de tu proyecto.">
+    <title>Contacto - Factory Computers Technology S.A.S.</title>
+
+    <link rel="stylesheet" href="Styles/estilos.css">
+    <script src="Scripts/app.js" defer></script>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <a href="index.html" class="logo" aria-label="Factory Computers, inicio">
+            FACTORY<span> COMPUTERS</span>
+            <small>TECHNOLOGY S.A.S.</small>
+        </a>
+
+        <nav class="menu" aria-label="Navegación principal">
+            <a href="index.html#inicio">Inicio</a>
+            <a href="index.html#servicios">Servicios</a>
+            <a href="index.html#nosotros">Nosotros</a>
+            <a href="contacto.html" class="boton-menu">Contáctanos</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN DE CONTACTO Y FORMULARIO -->
+        <section class="contacto-seccion">
+            <div class="contacto-contenedor">
+                <span class="etiqueta">HABLEMOS DE TU PROYECTO</span>
+                <h1>Escríbenos</h1>
+                <p>
+                    Llena el siguiente formulario con tus datos y los detalles de tu proyecto. 
+                    Te responderemos a la brevedad posible.
+                </p>
+
+                <!-- Formulario integrado con Web3Forms -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="formulario-contacto" id="formContacto">
+                    
+                    <!-- 1. REEMPLAZA ESTE VALOR CON TU ACCESS KEY DE WEB3FORMS -->
+                    <input type="hidden" name="access_key" value="10540564-f9cc-4297-b2c5-88b9065f2767">
+
+                    <!-- 2. Configuración del correo que recibirás -->
+                    <input type="hidden" name="subject" value="Nuevo proyecto desde la web - Factory Computers">
+                    <input type="hidden" name="from_name" value="Sitio Web Factory Computers">
+
+                    <!-- 3. Protección anti-spam invisible (Honeypot) -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <!-- 4. Opcional: Redirección a una página de "Gracias" propia después de enviar -->
+                    <input type="hidden" name="redirect" value="http://127.0.0.1:5500/gracias.html">
+
+                    <div class="grupo-campo">
+                        <label for="nombres">Nombres y Apellidos *</label>
+                        <input type="text" id="nombres" name="Nombres" placeholder="Ej. Juan Pérez" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="telefono">Teléfono de contacto *</label>
+                        <input type="tel" id="telefono" name="Telefono" placeholder="Ej. +57 300 123 4567" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="email">Correo electrónico *</label>
+                        <!-- Usar name="email" permite que al dar "Responder" en tu correo, le respondas directo al cliente -->
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="detalle">Detalle del proyecto *</label>
+                        <textarea id="detalle" name="Detalle_Proyecto" rows="5" placeholder="Describe brevemente tus requerimientos, objetivos o tipo de servicio..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="boton boton-naranja boton-enviar">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>
+            &copy; 2026 Factory Computers Technology S.A.S.
+            Todos los derechos reservados.
+        </p>
+        <span>TECNOLOGÍA · INNOVACIÓN · DESARROLLO</span>
+    </footer>
+</body>
+</html>

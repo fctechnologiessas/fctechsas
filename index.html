@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Factory Computers Technology S.A.S. Desarrollo de software, páginas web, hosting e infraestructura tecnológica.">
+
+    <title>Factory Computers Technology S.A.S.</title>
+
+    <link rel="stylesheet" href="Styles/estilos.css">
+    <script src="Scripts/app.js" defer></script>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <!-- <a href="#inicio" class="logo" aria-label="Factory Computers, inicio">
+            FACTORY<span> COMPUTERS</span>
+            <small>TECHNOLOGY S.A.S.</small>
+        </a> -->
+
+        <a href="index.html" class="logo" aria-label="Factory Computers, inicio">
+            <img src="img/Icono.png" alt="Logo Factory Computers" class="logo-icono">
+            <div class="logo-texto">
+                FACTORY<span> COMPUTERS</span>
+                <small>TECHNOLOGY S.A.S.</small>
+            </div>
+        </a>
+
+        <nav class="menu" aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="producto.html">Productos</a>
+            <a href="contacto.html" class="boton-menu">Contáctanos</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INICIO -->
+        <section class="hero" id="inicio">
+            <div class="hero-contenido">
+                <span class="etiqueta">TECNOLOGÍA E INNOVACIÓN</span>
+
+                <h1>
+                    Transformamos ideas
+                    en soluciones
+                    <span>tecnológicas.</span>
+                </h1>
+
+                <p>
+                    Bienvenido a Factory Computers Technology S.A.S.,
+                    una empresa de tecnología especializada en el
+                    desarrollo de software y la administración de
+                    infraestructura tecnológica.
+                </p>
+
+                <div class="hero-botones">
+                    <a href="#servicios" class="boton boton-naranja">
+                        Nuestros servicios
+                    </a>
+
+                    <a href="#nosotros" class="boton boton-borde">
+                        Conócenos
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <div class="circulo circulo-externo"></div>
+                <div class="circulo circulo-interno"></div>
+
+                <div class="icono-tecnologia">
+                    <!-- <span>&lt;/&gt;</span> -->
+                     <img src="img/Logo.png" alt="Logo Factory Computers" class="logo-hero">
+                    <p>INNOVATION</p>
+                    <div class="linea-tecnologia"></div>
+                    <small>SOFTWARE · INFRASTRUCTURE</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARRUSEL DE SERVICIOS -->
+        <section class="servicios" id="servicios">
+            <div class="titulo-seccion">
+                <span>LO QUE HACEMOS</span>
+                <h2>Nuestras soluciones tecnológicas</h2>
+                <p>
+                    Conoce nuestros servicios y encuentra la solución
+                    tecnológica que tu empresa necesita.
+                </p>
+            </div>
+
+            <div class="carrusel" id="carruselServicios"
+                 role="region"
+                 aria-roledescription="carrusel"
+                 aria-label="Nuestros servicios">
+
+                <div class="carrusel-ventana">
+                    <div class="carrusel-pista" id="pistaServicios">
+
+                        <article class="tarjeta">
+                            <div class="icono">01</div>
+                            <h3>Aplicaciones de escritorio</h3>
+                            <p>
+                                Desarrollo de aplicaciones instalables
+                                diseñadas para optimizar procesos,
+                                administrar información y responder a
+                                las necesidades de tu negocio.
+                            </p>
+                            <a href="#contacto" class="enlace-servicio">
+                                Consultar servicio <span>→</span>
+                            </a>
+                        </article>
+
+                        <article class="tarjeta">
+                            <div class="icono">02</div>
+                            <h3>Aplicaciones web</h3>
+                            <p>
+                                Soluciones accesibles desde el navegador
+                                para gestionar procesos, usuarios e
+                                información desde diferentes dispositivos.
+                            </p>
+                            <a href="#contacto" class="enlace-servicio">
+                                Consultar servicio <span>→</span>
+                            </a>
+                        </article>
+
+                        <article class="tarjeta">
+                            <div class="icono">03</div>
+                            <h3>Desarrollo de páginas web</h3>
+                            <p>
+                                Diseño y desarrollo de sitios web
+                                modernos, adaptables a celulares y
+                                computadores, con una presentación
+                                profesional para tu empresa.
+                            </p>
+                            <a href="#contacto" class="enlace-servicio">
+                                Consultar servicio <span>→</span>
+                            </a>
+                        </article>
+
+                        <article class="tarjeta">
+                            <div class="icono">04</div>
+                            <h3>Hosting y servicios en la nube</h3>
+                            <p>
+                                Servicios para alojar sitios y
+                                aplicaciones, y aprovechar recursos
+                                tecnológicos en la nube según las
+                                necesidades de tu organización.
+                            </p>
+                            <a href="#contacto" class="enlace-servicio">
+                                Consultar servicio <span>→</span>
+                            </a>
+                        </article>
+
+                        <article class="tarjeta">
+                            <div class="icono">05</div>
+                            <h3>Mantenimiento de computadores</h3>
+                            <p>
+                                Mantenimiento preventivo y correctivo
+                                para contribuir al rendimiento,
+                                la estabilidad y la continuidad
+                                de tus equipos.
+                            </p>
+                            <a href="#contacto" class="enlace-servicio">
+                                Consultar servicio <span>→</span>
+                            </a>
+                        </article>
+
+                        <article class="tarjeta">
+                            <div class="icono">06</div>
+                            <h3>Administración de servidores</h3>
+                            <p>
+                                Gestión y soporte de servidores,
+                                servicios e infraestructura para
+                                favorecer la disponibilidad y el
+                                funcionamiento de tus sistemas.
+                            </p>
+                            <a href="#contacto" class="enlace-servicio">
+                                Consultar servicio <span>→</span>
+                            </a>
+                        </article>
+
+                        <article class="tarjeta">
+                            <div class="icono">07</div>
+                            <h3>Licenciamientos</h3>
+                            <p>
+                                Asesoría en licenciamiento de software
+                                para identificar las opciones que
+                                se ajusten a los requerimientos
+                                de tu organización.
+                            </p>
+                            <a href="#contacto" class="enlace-servicio">
+                                Consultar servicio <span>→</span>
+                            </a>
+                        </article>
+
+                    </div>
+                </div>
+
+                <div class="carrusel-controles">
+                    <button type="button"
+                            class="flecha-carrusel"
+                            id="serviciosAnterior"
+                            aria-label="Mostrar servicios anteriores">
+                        &#8592;
+                    </button>
+
+                    <div class="carrusel-indicadores"
+                         id="indicadoresServicios"
+                         aria-label="Seleccionar posición del carrusel">
+                    </div>
+
+                    <button type="button"
+                            class="flecha-carrusel"
+                            id="serviciosSiguiente"
+                            aria-label="Mostrar servicios siguientes">
+                        &#8594;
+                    </button>
+                </div>
+
+                <p class="carrusel-ayuda" id="estadoCarrusel"
+                   aria-live="polite">
+                    Explora nuestros servicios.
+                </p>
+            </div>
+        </section>
+
+        <!-- NOSOTROS -->
+        <section class="nosotros" id="nosotros">
+            <div>
+                <span class="etiqueta">SOBRE FACTORY COMPUTERS</span>
+                <h2>La tecnología como motor de crecimiento.</h2>
+            </div>
+
+            <p>
+                Trabajamos para ofrecer soluciones tecnológicas
+                orientadas a las necesidades de cada organización,
+                contribuyendo a optimizar procesos y fortalecer
+                su infraestructura tecnológica.
+            </p>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contacto" id="contacto">
+            <span class="etiqueta">HABLEMOS DE TECNOLOGÍA</span>
+            <h2>¿Tienes un proyecto en mente?</h2>
+
+            <p>
+                Conversemos sobre las soluciones tecnológicas
+                que tu empresa necesita.
+            </p>
+
+            <!-- Reemplaza el correo de ejemplo por el correo real -->
+            <a href="contacto.html"
+               class="boton boton-naranja">
+                Escríbenos
+            </a>            
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>
+            &copy; 2026 Factory Computers Technology S.A.S.
+            Todos los derechos reservados.
+        </p>
+
+        <span>TECNOLOGÍA · INNOVACIÓN · DESARROLLO</span>
+    </footer>
+        <a href="https://wa.me/573004866173?text=Hola%20Factory%20Computers%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n"
+        class="whatsapp-flotante"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chatear por WhatsApp con Factory Computers">
+        WA
+    </a>
+
+        <aside class="trm-flotante" id="tableroDolar" aria-label="Valor del dólar hoy">
+        <span class="trm-etiqueta">USD / COP HOY</span>
+        <strong class="trm-valor" id="valorDolar">Cargando...</strong>
+        <small class="trm-estado" id="estadoDolar">Consultando API</small>
+    </aside>
+
+</body>
+</html>

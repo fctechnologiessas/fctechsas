@@ -1,0 +1,801 @@
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
+body {
+    background-color: #101010;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid #ff7900;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   2. ENCABEZADO Y NAVEGACIÓN
+========================================= */
+
+.encabezado {
+    min-height: 90px;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background-color: #080808;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.logo-icono {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.logo span {
+    color: #ff7900;
+}
+
+.logo small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #999;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.menu a {
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff7900;
+}
+
+.menu .boton-menu {
+    border: 1px solid #ff7900;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+/* =========================================
+   3. BOTONES
+========================================= */
+
+.boton {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s,
+                color 0.3s,
+                transform 0.3s;
+}
+
+.boton-naranja {
+    background-color: #ff7900;
+    color: #111;
+}
+
+.boton-naranja:hover {
+    background-color: #ff9638;
+    transform: translateY(-2px);
+}
+
+.boton-borde {
+    border: 1px solid #555;
+    color: #f5f5f5;
+}
+
+.boton-borde:hover {
+    border-color: #ff7900;
+    color: #ff7900;
+}
+
+/* =========================================
+   4. SECCIÓN PRINCIPAL
+========================================= */
+
+.hero {
+    min-height: 520px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 85% 50%,
+        #35200f 0%, #17120e 25%, #101010 65%);
+}
+
+.hero-contenido {
+    max-width: 620px;
+    position: relative;
+    z-index: 1;
+}
+
+.etiqueta,
+.titulo-seccion > span {
+    color: #ff7900;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 20px 0;
+    font-size: clamp(36px, 4.5vw, 60px);
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #ff7900;
+}
+
+.hero-contenido > p {
+    max-width: 550px;
+    color: #b8b8b8;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Ilustración tecnológica */
+
+.hero-visual {
+    width: 340px;
+    height: 340px;
+    flex-shrink: 0;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.circulo {
+    position: absolute;
+    border: 1px solid #79400f;
+    border-radius: 50%;
+}
+
+.circulo-externo {
+    width: 330px;
+    height: 330px;
+    border-style: dashed;
+    animation: girar 35s linear infinite;
+}
+
+.circulo-interno {
+    width: 250px;
+    height: 250px;
+    border-color: #ff7900;
+    opacity: 0.45;
+}
+
+.icono-tecnologia {
+    width: 220px;
+    padding: 35px 15px;
+    text-align: center;
+    background: linear-gradient(145deg, #252525, #111);
+    border: 1px solid #63360f;
+    border-radius: 15px;
+    box-shadow: 0 0 50px #ff790020;
+}
+
+.logo-hero {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+.icono-tecnologia p {
+    font-size: 13px;
+    letter-spacing: 5px;
+}
+
+.linea-tecnologia {
+    width: 70px;
+    height: 3px;
+    margin: 15px auto;
+    background-color: #ff7900;
+}
+
+.icono-tecnologia small {
+    font-size: 9px;
+    color: #aaa;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================
+   5. TÍTULO DE SERVICIOS
+========================================= */
+
+.servicios {
+    padding: 85px 8%;
+    background-color: #151515;
+}
+
+.titulo-seccion {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.titulo-seccion h2,
+.nosotros h2 {
+    margin: 12px 0;
+    font-size: 34px;
+    line-height: 1.25;
+}
+
+.titulo-seccion p {
+    color: #aaa;
+}
+
+/* =========================================
+   6. CARRUSEL DE SERVICIOS
+========================================= */
+
+.carrusel {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carrusel-ventana {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carrusel-pista {
+    display: flex;
+    align-items: stretch;
+    gap: 25px;
+    transition: transform 0.45s ease;
+    will-change: transform;
+}
+
+.tarjeta {
+    flex: 0 0 calc((100% - 50px) / 3);
+    min-width: 0;
+    min-height: 300px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #1d1d1d;
+    border: 1px solid #303030;
+    border-radius: 10px;
+    transition: border-color 0.3s,
+                background-color 0.3s;
+}
+
+.tarjeta:hover {
+    border-color: #ff7900;
+    background-color: #222;
+}
+
+.tarjeta .icono {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    margin-bottom: 22px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background-color: #ff790020;
+    color: #ff7900;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.tarjeta h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.tarjeta p {
+    margin-bottom: 22px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.enlace-servicio {
+    margin-top: auto;
+    color: #ff7900;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.enlace-servicio span {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.enlace-servicio:hover span {
+    transform: translateX(5px);
+}
+
+/* Controles del carrusel */
+
+.carrusel-controles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.flecha-carrusel {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #494949;
+    border-radius: 50%;
+    background-color: #1d1d1d;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s,
+                border-color 0.3s,
+                color 0.3s;
+}
+
+.flecha-carrusel:hover:not(:disabled) {
+    background-color: #ff7900;
+    border-color: #ff7900;
+    color: #111;
+}
+
+.flecha-carrusel:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.carrusel-indicadores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.indicador {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #555;
+    cursor: pointer;
+    transition: width 0.3s,
+                background-color 0.3s;
+}
+
+.indicador.activo {
+    width: 25px;
+    border-radius: 10px;
+    background-color: #ff7900;
+}
+
+.carrusel-ayuda {
+    margin-top: 15px;
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* =========================================
+   7. SOBRE NOSOTROS
+========================================= */
+
+.nosotros {
+    padding: 75px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    border-top: 1px solid #292929;
+}
+
+.nosotros h2 {
+    max-width: 500px;
+}
+
+.nosotros > p {
+    color: #aaa;
+    font-size: 17px;
+}
+
+/* =========================================
+   8. CONTACTO
+========================================= */
+
+.contacto {
+    padding: 65px 20px;
+    text-align: center;
+    background: linear-gradient(110deg, #21160d, #121212);
+    border-top: 1px solid #392411;
+}
+
+.contacto h2 {
+    margin-top: 12px;
+    font-size: 30px;
+}
+
+.contacto p {
+    margin: 12px 0 25px;
+    color: #aaa;
+}
+
+/* =========================================
+   9. PIE DE PÁGINA
+========================================= */
+
+.footer {
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background-color: #080808;
+    color: #888;
+    font-size: 12px;
+}
+
+.footer span {
+    color: #ff7900;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   10. ELEMENTOS FLOTANTES (WHATSAPP Y TRM)
+========================================= */
+
+.whatsapp-flotante {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 999;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: #25d366;
+    color: #101010;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-flotante:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
+}
+
+.trm-flotante {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 998;
+    min-width: 155px;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: #161616;
+    border: 1px solid #303030;
+    border-left: 3px solid #ff7900;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.trm-etiqueta {
+    color: #ff7900;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.trm-valor {
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.trm-estado {
+    color: #999;
+    font-size: 10px;
+}
+
+/* =========================================
+   11. PÁGINA Y FORMULARIO DE CONTACTO
+========================================= */
+
+.contacto-seccion {
+    padding: 70px 8%;
+    background: radial-gradient(ellipse at 50% 30%, #25170d 0%, #101010 70%);
+    display: flex;
+    justify-content: center;
+}
+
+.contacto-contenedor {
+    max-width: 650px;
+    width: 100%;
+    background-color: #161616;
+    border: 1px solid #2d2d2d;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.contacto-contenedor h1 {
+    font-size: 32px;
+    margin: 10px 0 15px;
+}
+
+.contacto-contenedor > p {
+    color: #b0b0b0;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.grupo-campo label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.grupo-campo input,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #0b0b0b;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: #ff7900;
+    box-shadow: 0 0 8px rgba(255, 121, 0, 0.3);
+}
+
+.grupo-campo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.boton-enviar {
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    padding: 14px;
+}
+
+/* =========================================
+   12. PÁGINA DE CONFIRMACIÓN (GRACIAS)
+========================================= */
+
+.confirmacion-contenedor {
+    text-align: center;
+}
+
+.icono-confirmacion {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: #ff790020;
+    border: 1px solid #ff7900;
+    color: #ff7900;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.confirmacion-contenedor > p strong {
+    color: #f5f5f5;
+}
+
+.confirmacion-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* =========================================
+   13. RESPONSIVE: TABLET (<= 1000px)
+========================================= */
+
+@media (max-width: 1000px) {
+    .encabezado {
+        padding: 20px 5%;
+    }
+
+    .menu {
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 65px 5%;
+    }
+
+    .hero-visual {
+        width: 270px;
+        height: 270px;
+    }
+
+    .circulo-externo {
+        width: 260px;
+        height: 260px;
+    }
+
+    .circulo-interno {
+        width: 205px;
+        height: 205px;
+    }
+
+    .icono-tecnologia {
+        width: 185px;
+    }
+
+    .logo-hero {
+        width: 56px;
+        height: 56px;
+    }
+
+    .tarjeta {
+        flex-basis: calc((100% - 25px) / 2);
+    }
+}
+
+/* =========================================
+   14. RESPONSIVE: CELULAR (<= 650px)
+========================================= */
+
+@media (max-width: 650px) {
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 9vw, 46px);
+    }
+
+    .hero-botones {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        margin-top: 15px;
+    }
+
+    .servicios {
+        padding: 60px 6%;
+    }
+
+    .titulo-seccion h2,
+    .nosotros h2 {
+        font-size: 28px;
+    }
+
+    .tarjeta {
+        flex-basis: 100%;
+        min-height: 280px;
+    }
+
+    .carrusel-pista {
+        gap: 16px;
+    }
+
+    .carrusel-controles {
+        gap: 16px;
+    }
+
+    .nosotros {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 55
